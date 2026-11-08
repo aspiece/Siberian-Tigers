@@ -43,9 +43,10 @@
 .wildbot-intro{align-items:center}.wildbot-photo{display:grid;place-items:center;min-height:180px;aspect-ratio:16/9;padding:20px;border:2px dashed var(--orange);border-radius:10px;background:#ffffff0a;text-align:center}.wildbot-photo p{margin:0}.wildbot-stories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px}.wildbot-stories h3{color:var(--orange);margin:0 0 8px}.wildbot-stories p{margin:0}@media(max-width:620px){.wildbot-stories{grid-template-columns:1fr}}
 
 .species-photo{margin:16px 0}.species-photo img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:contain;background:#f5f5f5;border-radius:8px}.species-photo figcaption{margin-top:6px;color:var(--muted);font-size:.75rem;line-height:1.45}
-  .hype-chain-viewer { display:block; width:100%; height:260px; background:#272321; border-radius:12px; }
+  .chain-views { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
+  .chain-views button { border:1px solid #666; border-radius:6px; padding:6px 9px; background:white; color:#171717; cursor:pointer; }
+  .chain-views button[aria-pressed="true"] { background:#ff8a42; border-color:#171717; font-weight:bold; }
 </style>
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="#" aria-label="Siberian Tigers, team 38050 — home"><img class="brand-mascot" src="assets/siberian-tiger-head.png" alt="" width="612" height="612"><span class="team-name">Siberian Tigers<small>Team 38050</small></span></a><div class="links"><a href="#research">Our research</a><a href="#species">Our focus</a><a href="#hype-chain">Hype Chain</a><a href="#other-species">Other research</a><a href="#prevent">Take action</a><a href="#project">Our project</a><a href="#wildbot">Wildbot</a><a href="#team">Meet the team</a><a href="#share">Share</a></div></nav></div></header>
 <main id="main"><div class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Michigan · Siberian Tigers · Wildbot</p><h1>Invasive species <em>in Michigan</em></h1><p class="intro">We’re the Siberian Tigers, a FIRST LEGO League Challenge team. We researched invasive species in Michigan to learn how they spread, how they affect local habitats, and what people can do to help. Our project focuses on two species, the rusty crayfish and the Asian longhorned tick.</p><div class="actions"><a class="button" href="#research">Explore our research ↓</a><a class="button secondary" href="#prevent">Help stop the spread</a></div></div><div class="hero-logo"><img src="assets/siberian-tigers-logo-clean.png" alt="Siberian Tigers team logo" width="1352" height="1163"></div></div></div>
@@ -61,22 +62,19 @@
       <h2>Meet the Rusty Crayfish Hype Chain</h2>
       <p>We made this wearable 3D print to start conversations about rusty crayfish, one of the invasive species we studied in Michigan. The nameplate pairs our Team 38050 logo with a QR code that brings people to this site.</p>
       <p>Share one way people can help keep rusty crayfish out of new waters. Keep unused bait out of lakes and streams.</p>
-      <p><a class="button" href="assets/Siberian-Tigers-Hype-Chain-Nameplate.3mf" download>Download our nameplate (.3mf)</a></p>
-      <details>
-        <summary>Explore the nameplate in interactive 3D</summary>
-        <p>Drag to rotate. Scroll or pinch to zoom.</p>
-        <model-viewer class="hype-chain-viewer" src="assets/hype-chain-nameplate.glb"
-          poster="assets/rusty-crayfish-hype-chain-preview.png"
-          alt="Interactive model of the orange Rusty Crayfish nameplate with white raised lettering, logo, and QR code"
-          camera-controls touch-action="pan-y" camera-orbit="0deg 25deg auto" loading="lazy"></model-viewer>
-      </details>
-      <p>The download contains our standalone nameplate with raised lettering, logo, and QR code. <a href="#species">Explore our rusty crayfish research</a>.</p>
+      <p>The complete print project has three plates. Choose a view to see the pendant from different angles or inspect either plate of chain links.</p>
+      <p>We’re seeking permission from the original designer to share the complete 3MF. <a href="#species">Explore our rusty crayfish research</a>.</p>
     </div>
     <figure class="species-photo">
-      <a href="assets/rusty-crayfish-hype-chain-3d.webp">
-        <img src="assets/rusty-crayfish-hype-chain-3d.webp" alt="Rendered 3D view of the orange crayfish pendant with its raised white team logo, Rusty Crayfish lettering, and QR code, beside orange and white chain links" width="1100" height="900" loading="lazy">
-      </a>
-      <figcaption>3D preview of the pendant and sample links. Original crawfish and chain design by ClintonGid. Nameplate artwork by the Siberian Tigers.</figcaption>
+      <div class="chain-views" role="group" aria-label="Hype Chain preview views">
+        <button type="button" data-chain-view="front" aria-pressed="true">Pendant front</button>
+        <button type="button" data-chain-view="angle" aria-pressed="false">Angled view</button>
+        <button type="button" data-chain-view="back" aria-pressed="false">Pendant back</button>
+        <button type="button" data-chain-view="links-one" aria-pressed="false">Orange links</button>
+        <button type="button" data-chain-view="links-two" aria-pressed="false">White links</button>
+      </div>
+      <img id="chain-preview" src="assets/hype-chain-view-front.png" alt="Pendant front from the Hype Chain print project" width="850" height="581" loading="lazy">
+      <figcaption>Rendered from the complete print project. Original crawfish and chain design by ClintonGid. Nameplate artwork by the Siberian Tigers.</figcaption>
     </figure>
   </div>
 </section>
@@ -106,4 +104,15 @@
 const search=document.querySelector('#search'),cards=[...document.querySelectorAll('.card')];
 function filterSpecies(){const q=search.value.trim().toLowerCase();let count=0;cards.forEach(card=>{const matches=card.dataset.name.includes(q);card.hidden=!matches;if(matches)count++});document.querySelector('#count').textContent='Showing '+count+' of 9 species across both sections';document.querySelector('#empty').hidden=count!==0}
 search.addEventListener('input',filterSpecies);
-</script></body></html>
+</script></body><script>
+const chainPreview = document.getElementById('chain-preview');
+const chainViews = document.querySelectorAll('[data-chain-view]');
+for (const button of chainViews) {
+  button.addEventListener('click', () => {
+    chainPreview.src = 'assets/hype-chain-view-' + button.dataset.chainView + '.png';
+    chainPreview.alt = button.textContent + ' from the Hype Chain print project';
+    for (const view of chainViews) view.setAttribute('aria-pressed', String(view === button));
+  });
+}
+</script>
+</html>
