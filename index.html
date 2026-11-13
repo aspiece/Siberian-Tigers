@@ -46,6 +46,16 @@
   .chain-views { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
   .chain-views button { border:1px solid #666; border-radius:6px; padding:6px 9px; background:white; color:#171717; cursor:pointer; }
   .chain-views button[aria-pressed="true"] { background:#ff8a42; border-color:#171717; font-weight:bold; }
+.profile-photo-toggle{position:relative;display:block;width:100%;aspect-ratio:3/4;padding:0;border:0;border-bottom:4px solid var(--orange);cursor:pointer}
+.profile-photo-toggle:focus-visible{outline-offset:-6px}
+.profile-photo-toggle img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+.profile-photo-toggle .fun-photo{visibility:hidden}
+.profile-photo-toggle[aria-pressed="true"] .professional-photo{visibility:hidden}
+.profile-photo-toggle[aria-pressed="true"] .fun-photo{visibility:visible}
+@media (hover:hover) and (pointer:fine){
+  .profile-photo-toggle:hover .professional-photo{visibility:hidden}
+  .profile-photo-toggle:hover .fun-photo{visibility:visible}
+}
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="#" aria-label="Siberian Tigers, team 38050 — home"><img class="brand-mascot" src="assets/siberian-tiger-head.png" alt="" width="612" height="612"><span class="team-name">Siberian Tigers<small>Team 38050</small></span></a><div class="links"><a href="classroom.html">Classroom guide</a><a href="#research">Our research</a><a href="#species">Our focus</a><a href="#hype-chain">Hype Chain</a><a href="#other-species">Other research</a><a href="#prevent">Take action</a><a href="#project">Our project</a><a href="#wildbot">Wildbot</a><a href="#team">Meet the team</a><a href="#share">Share</a></div></nav></div></header>
@@ -102,16 +112,46 @@
 </section>
 
 <section id="wildbot" class="dark"><div class="wrap"><div class="split wildbot-intro"><div><p class="eyebrow">FIRST LEGO League Challenge · Robot Game</p><h2>Meet Wildbot</h2><p class="section-intro">Wildbot is the Siberian Tigers’ competition robot. On the Robot Game field, we work together to build, program, and test how Wildbot moves and completes missions.</p><p>We started with last year’s base design and chose wider wheels for better grip. We grouped nearby missions that could share an attachment so Wildbot could do more in one run.</p></div><div class="wildbot-photo"><p><strong>Wildbot photo coming soon</strong></p></div></div><div class="wildbot-stories"><div><h3>How we built it</h3><p>We built our attachments on the same size frame. Two gears on top drive them, and L-shaped LEGO pieces lock them in place so we can swap them quickly.</p></div><div><h3>How we programmed it</h3><p>We use My Blocks to reuse code and the gyro sensor to help Wildbot drive straight and turn accurately. At the start of a program, we lower the attachment arm and set that position to zero so it starts in the same place each time.</p></div><div><h3>How we improved it</h3><p>For Flip the Rock, our first motor-powered attachment worked inconsistently. We tried a simpler attachment, adjusted how it connected, and slowed Wildbot down. Testing those changes helped us get the mission working.</p></div></div></div></section>
-<section id="team"><div class="wrap"><p class="eyebrow">Siberian Tigers</p><h2>Meet the team</h2><p class="section-intro">Meet the students, coaches, and mentor behind Wildbot and our invasive species project.</p><h3 class="roster-heading">Our students</h3><div class="roster-grid"><article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Faith"><span aria-hidden="true">01</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Student</p><h4>Faith</h4><p>Research goal: Explain when a species introduced to a new place is considered invasive.</p></div></article>
-<article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Fia"><span aria-hidden="true">02</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Student</p><h4>Fia</h4><p>Research goal: Show how round goby, spiny water fleas, and European frog-bit affect life in the Great Lakes.</p></div></article>
-<article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Victoria"><span aria-hidden="true">03</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Student</p><h4>Victoria</h4><p>Research goal: Investigate how round gobies compete with native fish for food and habitat.</p></div></article>
-<article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Danny"><span aria-hidden="true">04</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Student</p><h4>Danny</h4><p>Research goal: Investigate how rusty crayfish affect aquatic habitats and how people can help prevent their spread.</p></div></article>
-<article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Tice"><span aria-hidden="true">05</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Student</p><h4>Tice</h4><p>Research goal: Explore how invasive aquatic plants affect Michigan waterways.</p></div></article>
-<article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Townsend"><span aria-hidden="true">06</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Student</p><h4>Townsend</h4><p>Research goal coming soon.</p></div></article>
-<article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Hudson"><span aria-hidden="true">07</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Student</p><h4>Hudson</h4><p>Research goal: Find out how invasive carp can affect native fish and aquatic food webs.</p></div></article>
-<article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Johnny"><span aria-hidden="true">08</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Student</p><h4>Johnny</h4><p>Research goal: Learn how sea lampreys affect Great Lakes fish.</p></div></article>
-<article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Luca"><span aria-hidden="true">09</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Student</p><h4>Luca</h4><p>Research goal coming soon.</p></div></article>
-<article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Wesley"><span aria-hidden="true">10</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Student</p><h4>Wesley</h4><p>Research goal coming soon.</p></div></article></div><h3 class="roster-heading">Our coaches</h3><div class="roster-grid coaches-grid"><article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Amy"><span aria-hidden="true">01</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Coach</p><h4>Amy</h4><p>Amy keeps the team organized, guides the Innovation Project, and helps students find their voice as public speakers.</p></div></article>
+<section id="team"><div class="wrap"><p class="eyebrow">Siberian Tigers</p><h2>Meet the team</h2><p class="section-intro">Meet the students, coaches, and mentor behind Wildbot and our invasive species project.</p><h3 class="roster-heading">Our students</h3><p>Hover over a portrait or select it to see the fun photo.</p><div class="roster-grid"><article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Faith’s fun photo" aria-pressed="false">
+  <img class="professional-photo" src="assets/team/faith-professional.jpg" alt="Faith’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/faith-fun.jpg" alt="Faith’s fun portrait" loading="lazy" decoding="async">
+</button><div class="profile-content"><p class="profile-role">Student</p><h4>Faith</h4><p>Research goal: Explain when a species introduced to a new place is considered invasive.</p></div></article>
+<article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Fia’s fun photo" aria-pressed="false">
+  <img class="professional-photo" src="assets/team/fia-professional.jpg" alt="Fia’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/fia-fun.jpg" alt="Fia’s fun portrait" loading="lazy" decoding="async">
+</button><div class="profile-content"><p class="profile-role">Student</p><h4>Fia</h4><p>Research goal: Show how round goby, spiny water fleas, and European frog-bit affect life in the Great Lakes.</p></div></article>
+<article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Victoria’s fun photo" aria-pressed="false">
+  <img class="professional-photo" src="assets/team/victoria-professional.jpg" alt="Victoria’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/victoria-fun.jpg" alt="Victoria’s fun portrait" loading="lazy" decoding="async">
+</button><div class="profile-content"><p class="profile-role">Student</p><h4>Victoria</h4><p>Research goal: Investigate how round gobies compete with native fish for food and habitat.</p></div></article>
+<article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Danny’s fun photo" aria-pressed="false">
+  <img class="professional-photo" src="assets/team/danny-professional.jpg" alt="Danny’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/danny-fun.jpg" alt="Danny’s fun portrait" loading="lazy" decoding="async">
+</button><div class="profile-content"><p class="profile-role">Student</p><h4>Danny</h4><p>Research goal: Investigate how rusty crayfish affect aquatic habitats and how people can help prevent their spread.</p></div></article>
+<article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Tice’s fun photo" aria-pressed="false">
+  <img class="professional-photo" src="assets/team/tice-professional.jpg" alt="Tice’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/tice-fun.jpg" alt="Tice’s fun portrait" loading="lazy" decoding="async">
+</button><div class="profile-content"><p class="profile-role">Student</p><h4>Tice</h4><p>Research goal: Explore how invasive aquatic plants affect Michigan waterways.</p></div></article>
+<article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Townsend’s fun photo" aria-pressed="false">
+  <img class="professional-photo" src="assets/team/townsend-professional.jpg" alt="Townsend’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/townsend-fun.jpg" alt="Townsend’s fun portrait" loading="lazy" decoding="async">
+</button><div class="profile-content"><p class="profile-role">Student</p><h4>Townsend</h4><p>Research goal coming soon.</p></div></article>
+<article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Hudson’s fun photo" aria-pressed="false">
+  <img class="professional-photo" src="assets/team/hudson-professional.jpg" alt="Hudson’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/hudson-fun.jpg" alt="Hudson’s fun portrait" loading="lazy" decoding="async">
+</button><div class="profile-content"><p class="profile-role">Student</p><h4>Hudson</h4><p>Research goal: Find out how invasive carp can affect native fish and aquatic food webs.</p></div></article>
+<article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Johnny’s fun photo" aria-pressed="false">
+  <img class="professional-photo" src="assets/team/johnny-professional.jpg" alt="Johnny’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/johnny-fun.jpg" alt="Johnny’s fun portrait" loading="lazy" decoding="async">
+</button><div class="profile-content"><p class="profile-role">Student</p><h4>Johnny</h4><p>Research goal: Learn how sea lampreys affect Great Lakes fish.</p></div></article>
+<article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Luca’s fun photo" aria-pressed="false">
+  <img class="professional-photo" src="assets/team/luca-professional.jpg" alt="Luca’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/luca-fun.jpg" alt="Luca’s fun portrait" loading="lazy" decoding="async">
+</button><div class="profile-content"><p class="profile-role">Student</p><h4>Luca</h4><p>Research goal coming soon.</p></div></article>
+<article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Wesley’s fun photo" aria-pressed="false">
+  <img class="professional-photo" src="assets/team/wesley-professional.jpg" alt="Wesley’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/wesley-fun.jpg" alt="Wesley’s fun portrait" loading="lazy" decoding="async">
+</button><div class="profile-content"><p class="profile-role">Student</p><h4>Wesley</h4><p>Research goal coming soon.</p></div></article></div><h3 class="roster-heading">Our coaches</h3><div class="roster-grid coaches-grid"><article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Amy"><span aria-hidden="true">01</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Coach</p><h4>Amy</h4><p>Amy keeps the team organized, guides the Innovation Project, and helps students find their voice as public speakers.</p></div></article>
 <article class="profile-card"><div class="profile-photo" role="img" aria-label="Photo placeholder for Matt"><span aria-hidden="true">02</span><span>Photo coming soon</span></div><div class="profile-content"><p class="profile-role">Coach</p><h4>Matt</h4><p>From the field setup to the code that gets Wildbot moving, Matt guides the robot build, field build, programming, and engineering.</p></div></article></div>
 <h3 class="roster-heading">Our mentor</h3>
 <div class="roster-grid coaches-grid">
@@ -126,6 +166,13 @@
 <section id="share"><div class="wrap"><div class="share"><div><p class="eyebrow">Pass it on</p><h2>Scan. Learn. Protect.</h2><p>Share our guide at a team event, on a poster or with someone who loves Michigan’s outdoors.</p><p><a href="https://siberiantigers.org/">siberiantigers.org</a></p><p class="no-print"><a href="assets/siberian-tigers-qr.svg">Open printable QR code ↗</a> · <button class="button" onclick="window.print()">Print this page</button></p><small>This QR code opens siberiantigers.org.</small></div><img src="assets/siberian-tigers-qr.svg" alt="QR code linking to the Siberian Tigers Michigan invasive species website" width="240" height="240"></div></div></section>
 <section id="sources"><div class="wrap split"><div><p class="eyebrow">Keep exploring</p><h2>Learn from the experts.</h2><p class="section-intro">Each species card links to its source and identification images. Student research summaries and supporting sources reviewed November 5, 2026.</p></div><div class="resources"><a href="https://www.michigan.gov/invasives">Michigan Invasive Species Program ↗</a><a href="https://www.michigan.gov/invasives/take-action">Michigan prevention and outdoor guidance ↗</a><a href="https://www.michigan.gov/invasives/id-report/crustaceans/rusty-crayfish">Michigan guide to rusty crayfish ↗</a><a href="https://www.michigan.gov/mdard/about/media/pressreleases/2025/06/13/asian-longhorned-ticks-discovered-in-berrien-county">Michigan guide to the Asian longhorned tick ↗</a><a href="https://www.michigan.gov/mdhhs/safety-injury-prev/environmental-health/topics/mitracking/ticks">Michigan tick identification and prevention ↗</a></div></div></section></main><footer><div class="wrap">Siberian Tigers · FLL Challenge team · Learning together. Protecting Michigan.<br>A team education project. Species identification should be confirmed with an expert.</div></footer>
 <script>
+document.querySelectorAll('.profile-photo-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    const showingFunPhoto = button.getAttribute('aria-pressed') === 'true';
+    button.setAttribute('aria-pressed', String(!showingFunPhoto));
+  });
+});
+
 const search=document.querySelector('#search'),cards=[...document.querySelectorAll('.card')];
 function filterSpecies(){const q=search.value.trim().toLowerCase();let count=0;cards.forEach(card=>{const matches=card.dataset.name.includes(q);card.hidden=!matches;if(matches)count++});document.querySelector('#count').textContent='Showing '+count+' of 9 species across both sections';document.querySelector('#empty').hidden=count!==0}
 search.addEventListener('input',filterSpecies);
