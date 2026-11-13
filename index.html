@@ -46,9 +46,9 @@
   .chain-views { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
   .chain-views button { border:1px solid #666; border-radius:6px; padding:6px 9px; background:white; color:#171717; cursor:pointer; }
   .chain-views button[aria-pressed="true"] { background:#ff8a42; border-color:#171717; font-weight:bold; }
-.profile-photo-toggle{position:relative;display:block;width:100%;aspect-ratio:3/4;padding:0;border:0;border-bottom:4px solid var(--orange);cursor:pointer}
+.profile-photo-toggle{position:relative;overflow:hidden;display:block;width:100%;aspect-ratio:3/4;padding:0;border:0;border-bottom:4px solid var(--orange);cursor:pointer}
 .profile-photo-toggle:focus-visible{outline-offset:-6px}
-.profile-photo-toggle img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+.profile-photo-toggle img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;transform:scale(var(--photo-zoom,1));transform-origin:var(--photo-origin,center)}
 .profile-photo-toggle .fun-photo{visibility:hidden}
 .profile-photo-toggle[aria-pressed="true"] .professional-photo{visibility:hidden}
 .profile-photo-toggle[aria-pressed="true"] .fun-photo{visibility:visible}
@@ -113,50 +113,50 @@
 
 <section id="wildbot" class="dark"><div class="wrap"><div class="split wildbot-intro"><div><p class="eyebrow">FIRST LEGO League Challenge · Robot Game</p><h2>Meet Wildbot</h2><p class="section-intro">Wildbot is the Siberian Tigers’ competition robot. On the Robot Game field, we work together to build, program, and test how Wildbot moves and completes missions.</p><p>We started with last year’s base design and chose wider wheels for better grip. We grouped nearby missions that could share an attachment so Wildbot could do more in one run.</p></div><div class="wildbot-photo"><p><strong>Wildbot photo coming soon</strong></p></div></div><div class="wildbot-stories"><div><h3>How we built it</h3><p>We built our attachments on the same size frame. Two gears on top drive them, and L-shaped LEGO pieces lock them in place so we can swap them quickly.</p></div><div><h3>How we programmed it</h3><p>We use My Blocks to reuse code and the gyro sensor to help Wildbot drive straight and turn accurately. At the start of a program, we lower the attachment arm and set that position to zero so it starts in the same place each time.</p></div><div><h3>How we improved it</h3><p>For Flip the Rock, our first motor-powered attachment worked inconsistently. We tried a simpler attachment, adjusted how it connected, and slowed Wildbot down. Testing those changes helped us get the mission working.</p></div></div></div></section>
 <section id="team"><div class="wrap"><p class="eyebrow">Siberian Tigers</p><h2>Meet the team</h2><p class="section-intro">Meet the students, coaches, and mentor behind Wildbot and our invasive species project.</p><h3 class="roster-heading">Our students</h3><p>Hover over a portrait or select it to see the fun photo.</p><div class="roster-grid"><article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Faith’s fun photo" aria-pressed="false">
-  <img class="professional-photo" src="assets/team/faith-professional.jpg" alt="Faith’s professional portrait" loading="lazy" decoding="async">
-  <img class="fun-photo" src="assets/team/faith-fun.jpg" alt="Faith’s fun portrait" loading="lazy" decoding="async">
+  <img class="professional-photo" src="assets/team/faith-professional.jpg" style="--photo-zoom:1.818182;--photo-origin:57.407% 13.889%" alt="Faith’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/faith-fun.jpg" style="--photo-zoom:1.518987;--photo-origin:65.854% 21.951%" alt="Faith’s fun portrait" loading="lazy" decoding="async">
 </button><div class="profile-content"><p class="profile-role">Student</p><h4>Faith</h4><p>Research goal: Explain when a species introduced to a new place is considered invasive.</p></div></article>
 <article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Fia’s fun photo" aria-pressed="false">
-  <img class="professional-photo" src="assets/team/fia-professional.jpg" alt="Fia’s professional portrait" loading="lazy" decoding="async">
-  <img class="fun-photo" src="assets/team/fia-fun.jpg" alt="Fia’s fun portrait" loading="lazy" decoding="async">
+  <img class="professional-photo" src="assets/team/fia-professional.jpg" style="--photo-zoom:1.846154;--photo-origin:50.909% 17.727%" alt="Fia’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/fia-fun.jpg" style="--photo-zoom:1.500000;--photo-origin:55.000% 31.875%" alt="Fia’s fun portrait" loading="lazy" decoding="async">
 </button><div class="profile-content"><p class="profile-role">Student</p><h4>Fia</h4><p>Research goal: Show how round goby, spiny water fleas, and European frog-bit affect life in the Great Lakes.</p></div></article>
 <article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Victoria’s fun photo" aria-pressed="false">
-  <img class="professional-photo" src="assets/team/victoria-professional.jpg" alt="Victoria’s professional portrait" loading="lazy" decoding="async">
-  <img class="fun-photo" src="assets/team/victoria-fun.jpg" alt="Victoria’s fun portrait" loading="lazy" decoding="async">
+  <img class="professional-photo" src="assets/team/victoria-professional.jpg" style="--photo-zoom:1.764706;--photo-origin:53.846% 24.519%" alt="Victoria’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/victoria-fun.jpg" style="--photo-zoom:1.578947;--photo-origin:56.818% 28.977%" alt="Victoria’s fun portrait" loading="lazy" decoding="async">
 </button><div class="profile-content"><p class="profile-role">Student</p><h4>Victoria</h4><p>Research goal: Investigate how round gobies compete with native fish for food and habitat.</p></div></article>
 <article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Danny’s fun photo" aria-pressed="false">
-  <img class="professional-photo" src="assets/team/danny-professional.jpg" alt="Danny’s professional portrait" loading="lazy" decoding="async">
-  <img class="fun-photo" src="assets/team/danny-fun.jpg" alt="Danny’s fun portrait" loading="lazy" decoding="async">
+  <img class="professional-photo" src="assets/team/danny-professional.jpg" style="--photo-zoom:1.846154;--photo-origin:50.909% 23.182%" alt="Danny’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/danny-fun.jpg" style="--photo-zoom:1.818182;--photo-origin:50.000% 29.167%" alt="Danny’s fun portrait" loading="lazy" decoding="async">
 </button><div class="profile-content"><p class="profile-role">Student</p><h4>Danny</h4><p>Research goal: Investigate how rusty crayfish affect aquatic habitats and how people can help prevent their spread.</p></div></article>
 <article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Tice’s fun photo" aria-pressed="false">
-  <img class="professional-photo" src="assets/team/tice-professional.jpg" alt="Tice’s professional portrait" loading="lazy" decoding="async">
-  <img class="fun-photo" src="assets/team/tice-fun.jpg" alt="Tice’s fun portrait" loading="lazy" decoding="async">
+  <img class="professional-photo" src="assets/team/tice-professional.jpg" style="--photo-zoom:1.846154;--photo-origin:50.909% 12.273%" alt="Tice’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/tice-fun.jpg" style="--photo-zoom:1.558442;--photo-origin:53.488% 38.372%" alt="Tice’s fun portrait" loading="lazy" decoding="async">
 </button><div class="profile-content"><p class="profile-role">Student</p><h4>Tice</h4><p>Research goal: Explore how invasive aquatic plants affect Michigan waterways.</p></div></article>
 <article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Townsend’s fun photo" aria-pressed="false">
-  <img class="professional-photo" src="assets/team/townsend-professional.jpg" alt="Townsend’s professional portrait" loading="lazy" decoding="async">
-  <img class="fun-photo" src="assets/team/townsend-fun.jpg" alt="Townsend’s fun portrait" loading="lazy" decoding="async">
+  <img class="professional-photo" src="assets/team/townsend-professional.jpg" style="--photo-zoom:1.818182;--photo-origin:50.000% 22.222%" alt="Townsend’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/townsend-fun.jpg" style="--photo-zoom:1.304348;--photo-origin:50.000% 45.536%" alt="Townsend’s fun portrait" loading="lazy" decoding="async">
 </button><div class="profile-content"><p class="profile-role">Student</p><h4>Townsend</h4><p>Research goal coming soon.</p></div></article>
 <article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Hudson’s fun photo" aria-pressed="false">
-  <img class="professional-photo" src="assets/team/hudson-professional.jpg" alt="Hudson’s professional portrait" loading="lazy" decoding="async">
-  <img class="fun-photo" src="assets/team/hudson-fun.jpg" alt="Hudson’s fun portrait" loading="lazy" decoding="async">
+  <img class="professional-photo" src="assets/team/hudson-professional.jpg" style="--photo-zoom:1.846154;--photo-origin:49.091% 15.000%" alt="Hudson’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/hudson-fun.jpg" style="--photo-zoom:1.643836;--photo-origin:55.319% 15.957%" alt="Hudson’s fun portrait" loading="lazy" decoding="async">
 </button><div class="profile-content"><p class="profile-role">Student</p><h4>Hudson</h4><p>Research goal: Find out how invasive carp can affect native fish and aquatic food webs.</p></div></article>
 <article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Jonny’s fun photo" aria-pressed="false">
-  <img class="professional-photo" src="assets/team/johnny-professional.jpg" alt="Jonny’s professional portrait" loading="lazy" decoding="async">
-  <img class="fun-photo" src="assets/team/johnny-fun.jpg" alt="Jonny’s fun portrait" loading="lazy" decoding="async">
+  <img class="professional-photo" src="assets/team/johnny-professional.jpg" style="--photo-zoom:1.764706;--photo-origin:53.846% 24.519%" alt="Jonny’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/johnny-fun.jpg" style="--photo-zoom:1.578947;--photo-origin:54.545% 28.977%" alt="Jonny’s fun portrait" loading="lazy" decoding="async">
 </button><div class="profile-content"><p class="profile-role">Student</p><h4>Jonny</h4><p>Research goal: Learn how sea lampreys affect Great Lakes fish.</p></div></article>
 <article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Luca’s fun photo" aria-pressed="false">
-  <img class="professional-photo" src="assets/team/luca-professional.jpg" alt="Luca’s professional portrait" loading="lazy" decoding="async">
-  <img class="fun-photo" src="assets/team/luca-fun.jpg" alt="Luca’s fun portrait" loading="lazy" decoding="async">
+  <img class="professional-photo" src="assets/team/luca-professional.jpg" style="--photo-zoom:1.714286;--photo-origin:50.000% 40.500%" alt="Luca’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/luca-fun.jpg" style="--photo-zoom:1.090909;--photo-origin:0.000% 90.000%" alt="Luca’s fun portrait" loading="lazy" decoding="async">
 </button><div class="profile-content"><p class="profile-role">Student</p><h4>Luca</h4><p>Research goal coming soon.</p></div></article>
 <article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Wesley’s fun photo" aria-pressed="false">
-  <img class="professional-photo" src="assets/team/wesley-professional.jpg" alt="Wesley’s professional portrait" loading="lazy" decoding="async">
-  <img class="fun-photo" src="assets/team/wesley-fun.jpg" alt="Wesley’s fun portrait" loading="lazy" decoding="async">
+  <img class="professional-photo" src="assets/team/wesley-professional.jpg" style="--photo-zoom:1.791045;--photo-origin:47.170% 25.472%" alt="Wesley’s professional portrait" loading="lazy" decoding="async">
+  <img class="fun-photo" src="assets/team/wesley-fun.jpg" style="--photo-zoom:1.643836;--photo-origin:46.809% 28.723%" alt="Wesley’s fun portrait" loading="lazy" decoding="async">
 </button><div class="profile-content"><p class="profile-role">Student</p><h4>Wesley</h4><p>Research goal coming soon.</p></div></article></div>
 <h3 class="roster-heading">Our mentor</h3>
 <div class="roster-grid coaches-grid">
   <article class="profile-card">
     <button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Ashley's fun photo" aria-pressed="false">
-      <img class="professional-photo" src="assets/team/ashley-professional.jpg" alt="Ashley's professional portrait" loading="lazy" decoding="async">
+      <img class="professional-photo" src="assets/team/ashley-professional.jpg" style="--photo-zoom:1.333333;--photo-origin:46.667% 32.500%" alt="Ashley's professional portrait" loading="lazy" decoding="async">
       <img class="fun-photo" src="assets/team/ashley-fun.jpg" alt="Ashley's fun portrait" loading="lazy" decoding="async">
     </button>
     <div class="profile-content">
