@@ -11,21 +11,16 @@
 .team-name{display:block}
 .team-name small{display:block;margin-top:5px;color:#555;font-size:12px;font-weight:700;letter-spacing:.04em}
 @media(max-width:620px){.brand{gap:10px}.brand-mascot{width:52px;height:52px}.team-name{font-size:18px}}
-.hero-logo{display:grid;place-items:center;width:100%;max-width:420px;margin-inline:auto;padding:clamp(16px,3vw,30px);background:var(--paper);border:2px solid var(--orange);border-radius:16px}
-.hero-logo img{display:block;width:100%;height:auto}
-@media(max-width:620px){.hero-grid{grid-template-columns:1fr}.hero-logo{max-width:300px}}
-@media print{.hero-logo{display:none}}
-
-.featured-film{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:36px;align-items:center;background:var(--warm-surface);border:1px solid #f1c9a9;border-radius:16px;padding:clamp(22px,4vw,42px)}
+.brand-logo{display:block;flex:none;width:70px;height:auto}
+.hero-film{display:grid;place-items:center;aspect-ratio:16/9;background:#24201e;border:2px solid var(--orange);border-radius:12px;text-align:center;text-decoration:none;color:var(--paper)}
+.hero-film:hover{background:#39302b}
+.film-play{display:inline-flex;align-items:center;gap:9px;font-weight:800}
+.film-play span{display:grid;place-items:center;background:var(--orange);color:var(--ink);border-radius:50%;width:42px;height:42px;font-size:19px}
+.featured-film{background:var(--warm-surface);border:1px solid #f1c9a9;border-radius:16px;padding:clamp(22px,4vw,42px)}
 .featured-film h2{margin-top:8px}
 .featured-film p{max-width:620px}
-.film-poster{display:grid;place-items:center;gap:12px;min-height:240px;aspect-ratio:16/10;background:#1f1f1f;border-radius:12px;padding:25px;text-decoration:none;color:#fff;border:3px solid var(--orange);transition:box-shadow .18s ease}
-.film-poster img{display:block;max-width:74%;max-height:175px;width:auto;height:auto;object-fit:contain;background:#fff;border-radius:9px;padding:8px}
-.film-play{display:inline-flex;align-items:center;gap:9px;font-weight:800;color:#fff}
-.film-play span{display:grid;place-items:center;background:var(--orange);color:#171717;border-radius:50%;width:42px;height:42px;font-size:19px}
-.film-poster:hover{box-shadow:0 0 0 4px #ff8a4255}
-@media(max-width:760px){.featured-film{grid-template-columns:1fr}.film-poster{min-height:180px}}
-@media print{#film .film-poster{display:none}.featured-film{display:block;padding:12px}}
+@media(max-width:620px){.brand-logo{width:54px}}
+@media print{.hero-film{display:none}.featured-film{padding:12px}}
 .student-video{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
 .student-video h4{font-size:17px;line-height:1.4;margin:0 0 12px}
 .video-placeholder{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;text-align:center;border:2px dashed #b34c00;border-radius:8px;background:#fff4e8;padding:20px}
@@ -68,8 +63,8 @@
 }
 </style>
 </head>
-<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="#" aria-label="Siberian Tigers, team 38050 — home"><img class="brand-mascot" src="assets/siberian-tiger-head.png" alt="" width="612" height="612"><span class="team-name">Siberian Tigers<small>Team 38050</small></span></a><div class="links"><a href="#film">Watch our video</a><a href="classroom.html">Classroom guide</a><a href="#research">Our research</a><a href="#species">Our focus</a><a href="#hype-chain">Hype Chain</a><a href="#other-species">Other research</a><a href="#prevent">Take action</a><a href="#project">Our project</a><a href="#wildbot">Wildbot</a><a href="#team">Meet the team</a><a href="#share">Share</a></div></nav></div></header>
-<main id="main"><div class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Michigan · Siberian Tigers · Wildbot</p><h1>Invasive species <em>in Michigan</em></h1><p class="intro">We’re the Siberian Tigers, a FIRST LEGO League Challenge team. We researched invasive species in Michigan to learn how they spread, how they affect local habitats, and what people can do to help. Our project focuses on two species, the rusty crayfish and the Asian longhorned tick.</p><div class="actions"><a class="button" href="#film">Watch our video ▶</a><a class="button secondary" href="#research">Explore our research ↓</a></div></div><div class="hero-logo"><img src="assets/siberian-tigers-logo-clean.png" alt="Siberian Tigers team logo" width="1352" height="1163"></div></div></div>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="#" aria-label="Siberian Tigers, team 38050 — home"><img class="brand-logo" src="assets/siberian-tigers-logo-clean.png" alt="" width="1352" height="1163"><img class="brand-mascot" src="assets/siberian-tiger-head.png" alt="" width="612" height="612"><span class="team-name">Siberian Tigers<small>Team 38050</small></span></a><div class="links"><a href="#team-video">Watch our video</a><a href="classroom.html">Classroom guide</a><a href="#research">Our research</a><a href="#species">Our focus</a><a href="#hype-chain">Hype Chain</a><a href="#other-species">Other research</a><a href="#prevent">Take action</a><a href="#project">Our project</a><a href="#wildbot">Wildbot</a><a href="#team">Meet the team</a><a href="#share">Share</a></div></nav></div></header>
+<main id="main"><div class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Michigan · Siberian Tigers · Wildbot</p><h1>Invasive species <em>in Michigan</em></h1><p class="intro">We’re the Siberian Tigers, a FIRST LEGO League Challenge team. We researched invasive species in Michigan to learn how they spread, how they affect local habitats, and what people can do to help. Our project focuses on two species, the rusty crayfish and the Asian longhorned tick.</p><div class="actions"><a class="button" href="#team-video">Watch our video ▶</a><a class="button secondary" href="#research">Explore our research ↓</a></div></div><a id="team-video" class="hero-film" href="https://docs.google.com/videos/d/12gHcFpqj3n6PKh5OJU3QhGNnZBkuyAJ-GbhJwbAwiF8/play" target="_blank" rel="noopener noreferrer" aria-label="Watch the Siberian Tigers video in Google Vids (opens in a new tab)"><span class="film-play"><span aria-hidden="true">▶</span> Watch our video</span></a></div></div>
 <div class="strip"><div class="wrap"><span>01 / Learn to identify</span><span>02 / Prevent the spread</span><span>03 / Explore our solution</span></div></div>
 <section id="film" aria-labelledby="film-title"><div class="wrap">
   <div class="featured-film">
@@ -78,13 +73,7 @@
       <h2 id="film-title">Watch our invasive species video</h2>
       <p>Our team created this video to show why invasive species matter in Michigan, what we learned about rusty crayfish and Asian longhorned ticks, and how everyone can help stop their spread.</p>
       <p>See how our research, 3D-printed outreach items, and QR codes work together to help people learn and take action.</p>
-      <a class="button" href="https://docs.google.com/videos/d/12gHcFpqj3n6PKh5OJU3QhGNnZBkuyAJ-GbhJwbAwiF8/play" target="_blank" rel="noopener noreferrer">Play the team video ↗</a>
-      <p style="font-size:13px;color:var(--muted);margin-bottom:0">Opens the team’s Google Vids video in a new tab. A Google account may be needed to view it.</p>
     </div>
-    <a class="film-poster" href="https://docs.google.com/videos/d/12gHcFpqj3n6PKh5OJU3QhGNnZBkuyAJ-GbhJwbAwiF8/play" target="_blank" rel="noopener noreferrer" aria-label="Watch the Siberian Tigers invasive species video (opens in a new tab)">
-      <img src="assets/siberian-tigers-logo-clean.png" alt="" loading="lazy">
-      <span class="film-play"><span aria-hidden="true">▶</span> Watch our video</span>
-    </a>
   </div>
 </div></section>
 <section id="research"><div class="wrap"><p class="eyebrow">Student research</p><h2>How we researched Michigan’s invasive species</h2><p class="section-intro">We used notebook research, drawings, and interviews with biologists to compare invasive species that affect Michigan’s land and water. We also surveyed families in our K–12 robotics community to learn what they recognized and how they wanted to learn more.</p><div class="split"><div><h3>Learning with biologists</h3><p>Ms. Rachel, a biologist who tests waterways, helped us choose invasive species in Michigan as our topic. Heidi Ritchie shared what she learned working with invasive species at Belle Isle Park. She suggested narrowing our focus and linking to Michigan’s identification and reporting guides.</p><h3>Comparing species</h3><p>Students investigated ticks, crayfish, round goby, zebra mussels, spiny water fleas and European frog-bit, along with other early examples. We asked how each spreads, what harm it causes and what people can do.</p><h3>Checking what we publish</h3><p>Nonnative and invasive do not mean the same thing. A species is invasive when its introduction causes or is likely to cause harm. Our notes are a starting point; we check facts against official sources.</p><p><a href="https://www.michigan.gov/invasives">Michigan’s definition and species resources ↗</a></p></div><div><h3>Listening to our community</h3><p>In our K–12 robotics community survey, <strong>149 of 152 respondents</strong> said they knew what an invasive species was. On a question that allowed multiple answers, <strong>143 of 151</strong> selected zebra mussels and <strong>67 of 151</strong> selected round goby. That gap gave us a reason to focus on recognizing individual species.</p><p>Of the <strong>149 people who answered the learning preference question</strong>, 90 chose video (including one write-in for short videos), 39 chose QR-linked information, 17 chose a printed booklet, and three gave other answers.</p><h3>Turning research into a project</h3><p>We built this site to help families recognize two species, understand their effects, and find practical guidance. We created a team video and used QR codes on our brochure and 3D prints to make the site easy to find. Separate species-specific videos are still planned.</p><h3>What we will test next</h3><p>We plan to hand out the QR keychains and track how many people visit the site. We also want to ask visitors what action they remember after using our materials. Our survey asked about other species, so we still have to test what people learn about our two focus species.</p></div></div><p class="research-footnote">Student notes documented November 5, 2026. Public summaries use corrected wording and official sources; drawings are learning tools, not identification guides.</p></div></section>
