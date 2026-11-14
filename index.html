@@ -12,10 +12,9 @@
 .team-name small{display:block;margin-top:5px;color:#555;font-size:12px;font-weight:700;letter-spacing:.04em}
 @media(max-width:620px){.brand{gap:10px}.brand-mascot{width:52px;height:52px}.team-name{font-size:18px}}
 .brand-logo{display:block;flex:none;width:70px;height:auto}
-.hero-film{display:grid;place-items:center;aspect-ratio:16/9;background:#24201e;border:2px solid var(--orange);border-radius:12px;text-align:center;text-decoration:none;color:var(--paper)}
-.hero-film:hover{background:#39302b}
-.film-play{display:inline-flex;align-items:center;gap:9px;font-weight:800}
-.film-play span{display:grid;place-items:center;background:var(--orange);color:var(--ink);border-radius:50%;width:42px;height:42px;font-size:19px}
+.hero-film{min-width:0}
+.hero-film iframe{display:block;width:100%;height:auto;min-height:200px;aspect-ratio:16/9;background:#24201e;border:2px solid var(--orange);border-radius:12px}
+.hero-film a{display:inline-block;margin-top:8px;font-size:14px}
 .featured-film{background:var(--warm-surface);border:1px solid #f1c9a9;border-radius:16px;padding:clamp(22px,4vw,42px)}
 .featured-film h2{margin-top:8px}
 .featured-film p{max-width:620px}
@@ -64,7 +63,10 @@
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="#" aria-label="Siberian Tigers, team 38050 — home"><img class="brand-logo" src="assets/siberian-tigers-logo-clean.png" alt="" width="1352" height="1163"><img class="brand-mascot" src="assets/siberian-tiger-head.png" alt="" width="612" height="612"><span class="team-name">Siberian Tigers<small>Team 38050</small></span></a><div class="links"><a href="#team-video">Watch our video</a><a href="classroom.html">Classroom guide</a><a href="#research">Our research</a><a href="#species">Our focus</a><a href="#hype-chain">Hype Chain</a><a href="#other-species">Other research</a><a href="#prevent">Take action</a><a href="#project">Our project</a><a href="#wildbot">Wildbot</a><a href="#team">Meet the team</a><a href="#share">Share</a></div></nav></div></header>
-<main id="main"><div class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Michigan · Siberian Tigers · Wildbot</p><h1>Invasive species <em>in Michigan</em></h1><p class="intro">We’re the Siberian Tigers, a FIRST LEGO League Challenge team. We researched invasive species in Michigan to learn how they spread, how they affect local habitats, and what people can do to help. Our project focuses on two species, the rusty crayfish and the Asian longhorned tick.</p><div class="actions"><a class="button" href="#team-video">Watch our video ▶</a><a class="button secondary" href="#research">Explore our research ↓</a></div></div><a id="team-video" class="hero-film" href="https://docs.google.com/videos/d/12gHcFpqj3n6PKh5OJU3QhGNnZBkuyAJ-GbhJwbAwiF8/play" target="_blank" rel="noopener noreferrer" aria-label="Watch the Siberian Tigers video in Google Vids (opens in a new tab)"><span class="film-play"><span aria-hidden="true">▶</span> Watch our video</span></a></div></div>
+<main id="main"><div class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Michigan · Siberian Tigers · Wildbot</p><h1>Invasive species <em>in Michigan</em></h1><p class="intro">We’re the Siberian Tigers, a FIRST LEGO League Challenge team. We researched invasive species in Michigan to learn how they spread, how they affect local habitats, and what people can do to help. Our project focuses on two species, the rusty crayfish and the Asian longhorned tick.</p><div class="actions"><a class="button" href="#team-video">Watch our video ▶</a><a class="button secondary" href="#research">Explore our research ↓</a></div></div><div id="team-video" class="hero-film">
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7DIDdWYNtAY?autoplay=1&amp;mute=1&amp;playsinline=1" title="Siberian Tigers invasive species video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <a href="https://youtu.be/7DIDdWYNtAY">Watch on YouTube</a>
+</div></div></div>
 <div class="strip"><div class="wrap"><span>01 / Learn to identify</span><span>02 / Prevent the spread</span><span>03 / Explore our solution</span></div></div>
 <section id="film" aria-labelledby="film-title"><div class="wrap">
   <div class="featured-film">
