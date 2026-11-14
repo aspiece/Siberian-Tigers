@@ -64,7 +64,7 @@
 </head>
 <body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="#" aria-label="Siberian Tigers, team 38050 — home"><img class="brand-logo" src="assets/siberian-tigers-logo-clean.png" alt="" width="1352" height="1163"><img class="brand-mascot" src="assets/siberian-tiger-head.png" alt="" width="612" height="612"><span class="team-name">Siberian Tigers<small>Team 38050</small></span></a><div class="links"><a href="#team-video">Watch our video</a><a href="classroom.html">Classroom guide</a><a href="#research">Our research</a><a href="#species">Our focus</a><a href="#hype-chain">Hype Chain</a><a href="#other-species">Other research</a><a href="#prevent">Take action</a><a href="#project">Our project</a><a href="#wildbot">Wildbot</a><a href="#team">Meet the team</a><a href="#share">Share</a></div></nav></div></header>
 <main id="main"><div class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Michigan · Siberian Tigers · Wildbot</p><h1>Invasive species <em>in Michigan</em></h1><p class="intro">We’re the Siberian Tigers, a FIRST LEGO League Challenge team. We researched invasive species in Michigan to learn how they spread, how they affect local habitats, and what people can do to help. Our project focuses on two species, the rusty crayfish and the Asian longhorned tick.</p><div class="actions"><a class="button" href="#team-video">Watch our video ▶</a><a class="button secondary" href="#research">Explore our research ↓</a></div></div><div id="team-video" class="hero-film">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7DIDdWYNtAY?autoplay=1&amp;mute=1&amp;playsinline=1" title="Siberian Tigers invasive species video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe id="team-video-player" width="560" height="315" src="https://www.youtube-nocookie.com/embed/7DIDdWYNtAY?enablejsapi=1&amp;playsinline=1&amp;origin=https%3A%2F%2Fsiberiantigers.org" title="Siberian Tigers invasive species video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <a href="https://youtu.be/7DIDdWYNtAY">Watch on YouTube</a>
 </div></div></div>
 <div class="strip"><div class="wrap"><span>01 / Learn to identify</span><span>02 / Prevent the spread</span><span>03 / Explore our solution</span></div></div>
@@ -197,7 +197,20 @@ document.querySelectorAll('.profile-photo-toggle').forEach(button => {
 const search=document.querySelector('#search'),cards=[...document.querySelectorAll('.card')];
 function filterSpecies(){const q=search.value.trim().toLowerCase();let count=0;cards.forEach(card=>{const matches=card.dataset.name.includes(q);card.hidden=!matches;if(matches)count++});document.querySelector('#count').textContent='Showing '+count+' of 9 species across both sections';document.querySelector('#empty').hidden=count!==0}
 search.addEventListener('input',filterSpecies);
-</script></body><script>
+</script><script>
+window.onYouTubeIframeAPIReady = function () {
+  new YT.Player("team-video-player", {
+    events: {
+      onReady: function (event) {
+        event.target.mute();
+        event.target.playVideo();
+      }
+    }
+  });
+};
+</script>
+<script async src="https://www.youtube.com/iframe_api"></script>
+</body><script>
 const chainPreview = document.getElementById('chain-preview');
 const chainViews = document.querySelectorAll('[data-chain-view]');
 for (const button of chainViews) {
