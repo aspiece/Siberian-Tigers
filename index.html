@@ -23,13 +23,15 @@ header nav .links{gap:6px 18px;align-items:center}
 nav .links a{display:inline-flex;align-items:center;min-height:44px}
 nav .links .teacher-link{color:var(--muted);text-decoration:underline}
 .hero-film{min-width:0}
-.video-cover{display:block;width:100%;min-height:200px;aspect-ratio:16/9;background:#24201e;border:2px solid var(--orange);border-radius:12px}
+.hero-film iframe,.video-cover{display:block;width:100%;min-height:200px;aspect-ratio:16/9;background:#24201e;border:2px solid var(--orange);border-radius:12px}
+.hero-film iframe{height:auto}
 .video-cover{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;text-align:center;text-decoration:none;color:var(--paper)}
 .video-cover img{width:clamp(64px,12vw,108px);height:auto}
 .video-cover span{display:inline-block;background:var(--orange);color:var(--ink);border-radius:7px;padding:10px 14px;font-weight:800}
 .video-cover:hover span,.video-cover:focus-visible span{text-decoration:underline}
 .hero-film details p{font-size:15px}
 .hero-film .transcript-note{color:#ddd}
+.hero-film .youtube-link{display:inline-flex;align-items:center;min-height:44px;font-size:14px}
 .species-index{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:16px 0 24px}
 .species-index li[hidden]{display:none}
 .species-index a,.project-links a{display:inline-flex;align-items:center;min-height:44px;padding:6px 12px;border:1px solid var(--line);border-radius:7px}
@@ -79,8 +81,9 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
 <main id="main"><div class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Siberian Tigers · FIRST LEGO League</p><h1>Invasive species <em>in Michigan</em></h1><p class="intro">Meet two invasive species our team studied in Michigan: the rusty crayfish and the Asian longhorned tick. See how to recognize them and what you can do to help.</p><div class="actions"><a class="button" href="#species">Identify the species</a><a class="button secondary" href="#prevent">Take action</a></div></div><div id="team-video" class="hero-film">
   <a class="video-cover" href="https://youtu.be/7DIDdWYNtAY">
     <img src="assets/siberian-tiger-head.png" alt="" width="612" height="612">
-    <span>▶ Watch the 2-minute video on YouTube</span>
+    <span>▶ Play the 2-minute team video</span>
   </a>
+  <a class="youtube-link" href="https://youtu.be/7DIDdWYNtAY">Watch on YouTube</a>
   <details id="film">
     <summary>Read the video summary</summary>
     <p>Our team explains why invasive species matter in Michigan, what we learned about rusty crayfish and Asian longhorned ticks, and how people can help prevent their spread. We also show how our 3D-printed outreach items and QR codes help families find these resources.</p>
@@ -243,6 +246,19 @@ search.addEventListener('input', () => {
     : 'No species match. Try another name.';
 });
 
+const videoCover = document.querySelector('.video-cover');
+videoCover.addEventListener('click', (event) => {
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  const player = document.createElement('iframe');
+  player.src = 'https://www.youtube-nocookie.com/embed/7DIDdWYNtAY?autoplay=1&playsinline=1';
+  player.title = 'Siberian Tigers invasive species video';
+  player.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+  player.referrerPolicy = 'strict-origin-when-cross-origin';
+  player.allowFullscreen = true;
+  videoCover.replaceWith(player);
+  player.focus();
+});
 </script>
 <script>
 const chainPreview = document.getElementById('chain-preview');
