@@ -29,6 +29,8 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
 .filming-grid img,.filming-grid video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--ink)}
 .filming-grid video{max-width:720px;margin:auto}
 .filming-grid .filming-photo{aspect-ratio:4/3}
+.filming-grid h3,.filming-grid .montage-link{margin:12px 16px}
+.filming-grid .montage-link{display:inline-block}
 .filming-grid figcaption{padding:12px 16px;font-size:15px}
 @media(max-width:620px){.filming-grid{grid-template-columns:1fr}}
 @media print{.filming-grid video{display:none}}
@@ -93,7 +95,7 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
     <img src="assets/siberian-tiger-head.png" alt="" width="612" height="612">
     <span>▶ Play the 2-minute team video</span>
   </a>
-  <a class="youtube-link" href="https://youtu.be/7DIDdWYNtAY">Watch on YouTube</a> · <a href="#filming">Behind the scenes</a>
+  <a class="youtube-link" href="https://youtu.be/7DIDdWYNtAY">Watch on YouTube</a> · <a href="#filming-montage">Watch our filming montage</a>
   <details id="film">
     <summary>Read the video summary</summary>
     <p>Our team explains why invasive species matter in Michigan, what we learned about rusty crayfish and Asian longhorned ticks, and how people can help prevent their spread. We also show how our 3D-printed outreach items and QR codes help families find these resources.</p>
@@ -155,12 +157,13 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
     <h2 id="filming-title">Behind the scenes of our video</h2>
     <p class="section-intro">We took turns in front of the camera to share what we learned about invasive species and show how we use our 3D prints to start conversations. Here are a few moments from our filming night.</p>
     <div class="filming-grid">
-      <figure class="filming-clip">
-        <video controls playsinline preload="none" width="640" height="360" poster="assets/filming/team-filming-poster.webp" aria-label="Behind-the-scenes footage of the team recording an interview">
-          <source src="assets/filming/team-filming.mp4" type="video/mp4">
-          <a href="assets/filming/team-filming.mp4">Open our behind-the-scenes clip</a>
+      <figure class="filming-clip" id="filming-montage">
+        <h3 id="filming-montage-title">Watch our filming-night montage</h3>
+        <video controls playsinline preload="metadata" width="640" height="360" poster="assets/filming/team-filming-poster.webp" aria-labelledby="filming-montage-title">
+          <source src="assets/filming/filming-night-montage.mp4" type="video/mp4">
         </video>
-        <figcaption>We took turns in front of the camera and listened while our teammates recorded their answers. This clip has no audio.</figcaption>
+        <figcaption>We took turns in front of the camera and listened while our teammates recorded their answers. Press play to hear our filming night with some background music.</figcaption>
+        <a class="montage-link" href="assets/filming/filming-night-montage.mp4">Open our 15-second montage</a>
       </figure>
       <figure class="filming-clip">
         <img class="filming-photo" src="assets/filming/team-filming-photo.webp" width="960" height="720" loading="lazy" decoding="async" alt="Team members seated at a table with papers while a teammate sits across from them for an interview">
