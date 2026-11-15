@@ -23,6 +23,8 @@ header nav .links{gap:6px 18px;align-items:center}
 nav .links a{display:inline-flex;align-items:center;min-height:44px}
 nav .links .teacher-link{color:var(--muted);text-decoration:underline}
 #filming{background:var(--warm-surface)}
+.contribution-card{border:1px solid var(--line);border-radius:12px;padding:clamp(18px,3vw,26px)}
+.contribution-card h3{margin-top:0}
 .filming-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
 .filming-grid figure{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:white}
 .filming-grid .filming-clip{grid-column:1/-1}
@@ -140,7 +142,7 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
     <div>
       <p class="eyebrow">FIRST LEGO League Challenge · Team 38050</p>
       <h2>Our Innovation Project</h2>
-    <div class="project-links"><a href="#filming">Filming night</a><a href="#research">Student research</a><a href="#hype-chain">Hype Chain</a><a href="#wildbot">Wildbot</a><a href="#team">Meet the team</a><a href="#share">Share the QR code</a></div>
+    <div class="project-links"><a href="#student-contributions">What we did</a><a href="#filming">Filming night</a><a href="#research">Student research</a><a href="#hype-chain">Hype Chain</a><a href="#wildbot">Wildbot</a><a href="#team">Meet the team</a><a href="#share">Share the QR code</a></div>
       <p>We’re the Siberian Tigers from Fenton, Michigan. We started with a question: Could helping families recognize invasive species give them more ways to prevent their spread?</p>
       <p>After talking with biologists and surveying our robotics community, we built a website about rusty crayfish and the Asian longhorned tick. It gives families practical steps and links to <a href="https://www.michigan.gov/invasives/id-report">Michigan’s identification and reporting resources</a>.</p>
     </div>
@@ -150,6 +152,28 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
       <h3>What we’ll test next</h3>
       <p>We plan to hand out the keychains and see how many people visit. We also want to find out whether visitors can name a step they can take after using the site.</p>
     </div>
+  </div>
+</section>
+<section id="student-contributions" aria-labelledby="student-contributions-title">
+  <div class="wrap">
+    <h2 id="student-contributions-title">What we did as a team</h2>
+    <div class="grid">
+      <article class="contribution-card">
+        <h3>Our Innovation Project</h3>
+        <p><b>We investigated the problem.</b> We compared species in our notebooks and asked biologists for help narrowing our research to rusty crayfish and Asian longhorned ticks.</p>
+        <p><b>We listened to our community.</b> Of the 149 people who answered how they wanted to learn, 90 chose video. That helped us decide to film our own explanations.</p>
+        <p><b>We made ways to share what we learned.</b> We made a brochure and, with help from our mentor, 3D printed keychains with QR codes that bring people to our website.</p>
+        <p class="focus-actions"><a href="#research">Read our research</a><a href="#filming-montage">See us filming</a></p>
+      </article>
+      <article class="contribution-card">
+        <h3>Our Robot Game</h3>
+        <p><b>We planned our runs.</b> We grouped nearby missions that could use the same attachment so Wildbot could do more in one run.</p>
+        <p><b>We built and programmed Wildbot.</b> We used a common frame to make attachments easier to swap, and we used My Blocks to reuse code.</p>
+        <p><b>We tested and revised our design.</b> When our first Flip the Rock attachment worked inconsistently, we tried a simpler attachment, adjusted how it connected, and slowed Wildbot down.</p>
+        <p class="focus-actions"><a href="#wildbot">See how we built and improved Wildbot</a></p>
+      </article>
+    </div>
+    <p><a href="#team">Meet our team</a></p>
   </div>
 </section>
 <section id="filming" aria-labelledby="filming-title">
@@ -188,7 +212,7 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
     <p><a href="#team-video">Watch our finished video</a></p>
   </div>
 </section>
-<section id="research"><div class="wrap"><p class="eyebrow">Student research</p><h2>How we researched Michigan’s invasive species</h2><p class="section-intro">We used notebook research, drawings, and interviews with biologists to compare invasive species that affect Michigan’s land and water. We also surveyed families in our K–12 robotics community to learn what they recognized and how they wanted to learn more.</p><div class="split"><div><h3>Learning with biologists</h3><p>Ms. Rachel, a biologist who tests waterways, helped us choose invasive species in Michigan as our topic. Heidi Ritchie shared what she learned working with invasive species at Belle Isle Park. She suggested narrowing our focus and linking to Michigan’s identification and reporting guides.</p><h3>Comparing species</h3><p>Students investigated ticks, crayfish, round goby, zebra mussels, spiny water fleas and European frog-bit, along with other early examples. We asked how each spreads, what harm it causes and what people can do.</p><h3>Checking what we publish</h3><p>Nonnative and invasive do not mean the same thing. A species is invasive when its introduction causes or is likely to cause harm. Our notes are a starting point; we check facts against official sources.</p><p><a href="https://www.michigan.gov/invasives">Michigan’s definition and species resources ↗</a></p></div><div><h3>Listening to our community</h3><p>In our K–12 robotics community survey, <strong>149 of 152 respondents</strong> said they knew what an invasive species was. On a question that allowed multiple answers, <strong>143 of 151</strong> selected zebra mussels and <strong>67 of 151</strong> selected round goby. That gap gave us a reason to focus on recognizing individual species.</p><p>Of the <strong>149 people who answered the learning preference question</strong>, 90 chose video (including one write-in for short videos), 39 chose QR-linked information, 17 chose a printed booklet, and three gave other answers.</p><h3>Turning research into a project</h3><p>We built this site to help families recognize two species, understand their effects, and find practical guidance. We created a team video and used QR codes on our brochure and 3D prints to make the site easy to find. Separate species-specific videos are still planned.</p><h3>What we will test next</h3><p>We plan to hand out the QR keychains and track how many people visit the site. We also want to ask visitors what action they remember after using our materials. Our survey asked about other species, so we still have to test what people learn about our two focus species.</p></div></div><p class="research-footnote">Student notes documented November 5, 2026. Public summaries use corrected wording and official sources; drawings are learning tools, not identification guides.</p></div></section>
+<section id="research"><div class="wrap"><p class="eyebrow">Student research</p><h2>How we researched Michigan’s invasive species</h2><p class="section-intro">We used notebook research, drawings, and interviews with biologists to compare invasive species that affect Michigan’s land and water. We also surveyed families in our K–12 robotics community to learn what they recognized and how they wanted to learn more.</p><div class="split"><div><h3>Learning with biologists</h3><p>Ms. Rachel, a biologist who tests waterways, helped us choose invasive species in Michigan as our topic. Heidi Ritchie shared what she learned working with invasive species at Belle Isle Park. She suggested narrowing our focus and linking to Michigan’s identification and reporting guides.</p><h3>Comparing species</h3><p>We investigated ticks, crayfish, round goby, zebra mussels, spiny water fleas and European frog-bit, along with other early examples. We asked how each spreads, what harm it causes and what people can do.</p><h3>Checking what we publish</h3><p>Nonnative and invasive do not mean the same thing. A species is invasive when its introduction causes or is likely to cause harm. Our notes are a starting point; we check facts against official sources.</p><p><a href="https://www.michigan.gov/invasives">Michigan’s definition and species resources ↗</a></p></div><div><h3>Listening to our community</h3><p>In our K–12 robotics community survey, <strong>149 of 152 respondents</strong> said they knew what an invasive species was. On a question that allowed multiple answers, <strong>143 of 151</strong> selected zebra mussels and <strong>67 of 151</strong> selected round goby. That gap gave us a reason to focus on recognizing individual species.</p><p>Of the <strong>149 people who answered the learning preference question</strong>, 90 chose video (including one write-in for short videos), 39 chose QR-linked information, 17 chose a printed booklet, and three gave other answers.</p><h3>Turning research into a project</h3><p>We built this site to help families recognize two species, understand their effects, and find practical guidance. We created a team video and used QR codes on our brochure and 3D prints to make the site easy to find. Separate species-specific videos are still planned.</p><h3>What we will test next</h3><p>We plan to hand out the QR keychains and track how many people visit the site. We also want to ask visitors what action they remember after using our materials. Our survey asked about other species, so we still have to test what people learn about our two focus species.</p></div></div><p class="research-footnote">Student notes documented November 5, 2026. Public summaries use corrected wording and official sources; drawings are learning tools, not identification guides.</p></div></section>
 <section id="hype-chain">
   <div class="wrap split">
     <div>
