@@ -61,6 +61,14 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
 @media print{.hero-film,.species-index,.project-links{display:none}}
 
 #team{background:var(--warm-surface)}
+#team-group{margin:24px 0 0;max-width:940px}
+.team-group-toggle{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:white;color:var(--ink);cursor:pointer;font:inherit}
+.team-group-toggle .team-group-image{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center bottom;filter:brightness(1.045) contrast(1.025)}
+.team-group-toggle .team-group-alternate,.team-group-toggle .team-group-back{display:none}
+.team-group-toggle[aria-pressed="true"] .team-group-alternate,.team-group-toggle[aria-pressed="true"] .team-group-back{display:block}
+.team-group-toggle[aria-pressed="true"] .team-group-main,.team-group-toggle[aria-pressed="true"] .team-group-forward{display:none}
+.team-group-prompt{display:block;padding:12px 16px;font-weight:750;text-align:center}
+@media(max-width:620px){.team-group-toggle .team-group-image{aspect-ratio:4/3}}
 .roster-heading{font-size:24px;margin:34px 0 18px}
 .roster-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .profile-card{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:12px}
@@ -283,7 +291,15 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
   </div>
 </section>
 <section id="wildbot" class="dark"><div class="wrap"><div class="split wildbot-intro"><div><p class="eyebrow">FIRST LEGO League Challenge · Robot Game</p><h2>Meet Wildbot</h2><p class="section-intro">Wildbot is the Siberian Tigers’ competition robot. On the Robot Game field, we work together to build, program, and test how Wildbot moves and completes missions.</p><p>We started with last year’s base design and chose wider wheels for better grip. We grouped nearby missions that could share an attachment so Wildbot could do more in one run.</p></div><div class="wildbot-photo"><p><strong>Wildbot photo coming soon</strong></p></div></div><div class="wildbot-stories"><div><h3>How we built it</h3><p>We built our attachments on the same size frame. Two gears on top drive them, and L-shaped LEGO pieces lock them in place so we can swap them quickly.</p></div><div><h3>How we programmed it</h3><p>We use My Blocks to reuse code and the gyro sensor to help Wildbot drive straight and turn accurately. At the start of a program, we lower the attachment arm and set that position to zero so it starts in the same place each time.</p></div><div><h3>How we improved it</h3><p>For Flip the Rock, our first motor-powered attachment worked inconsistently. We tried a simpler attachment, adjusted how it connected, and slowed Wildbot down. Testing those changes helped us get the mission working.</p></div></div></div></section>
-<section id="team"><div class="wrap"><p class="eyebrow">Siberian Tigers</p><h2>Meet the team</h2><p class="section-intro">Meet the students, coaches, and mentor behind Wildbot and our invasive species project.</p><h3 class="roster-heading">Our students</h3><p>Hover over a portrait or select it to see the fun photo.</p><div class="roster-grid"><article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Faith’s fun photo" aria-pressed="false">
+<section id="team"><div class="wrap"><p class="eyebrow">Siberian Tigers</p><h2>Meet the team</h2><p class="section-intro">Meet the students, coaches, and mentor behind Wildbot and our invasive species project.</p><figure id="team-group">
+  <button class="team-group-toggle" type="button" aria-label="Show our fun team photo" aria-pressed="false">
+    <img class="team-group-image team-group-main" src="assets/team/team-group.webp" alt="" width="1440" height="1080" loading="lazy" decoding="async">
+    <img class="team-group-image team-group-alternate" src="assets/team/team-group-fun.webp" alt="" width="1440" height="1080" loading="lazy" decoding="async">
+    <span class="team-group-prompt team-group-forward" aria-hidden="true">See our fun team photo</span>
+    <span class="team-group-prompt team-group-back" aria-hidden="true">Back to our team portrait</span>
+  </button>
+</figure>
+<h3 class="roster-heading">Our students</h3><p>Hover over a portrait or select it to see the fun photo.</p><div class="roster-grid"><article class="profile-card"><button type="button" class="profile-photo profile-photo-toggle" aria-label="Show Faith’s fun photo" aria-pressed="false">
   <img class="professional-photo" src="assets/team/faith-professional.jpg" style="--photo-zoom:1.818182;--photo-origin:57.407% 13.889%" alt="Faith’s professional portrait" loading="lazy" decoding="async">
   <img class="fun-photo" src="assets/team/faith-fun.jpg" style="--photo-zoom:1.518987;--photo-origin:65.854% 21.951%" alt="Faith’s fun portrait" loading="lazy" decoding="async">
 </button><div class="profile-content"><p class="profile-role">Student</p><h4>Faith</h4><p>Research goal: Explain when a species introduced to a new place is considered invasive.</p></div></article>
@@ -341,7 +357,7 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
 <section id="share"><div class="wrap"><div class="share"><div><p class="eyebrow">Pass it on</p><h2>Scan. Learn. Protect.</h2><p>Share our guide at a team event, on a poster or with someone who loves Michigan’s outdoors.</p><p><a href="https://siberiantigers.org/">siberiantigers.org</a></p><p class="no-print"><a href="assets/siberian-tigers-qr.svg">Open printable QR code ↗</a> · <button class="button" onclick="window.print()">Print this page</button></p><small>This QR code opens siberiantigers.org.</small></div><img src="assets/siberian-tigers-qr.svg" alt="QR code linking to the Siberian Tigers Michigan invasive species website" width="240" height="240"></div></div></section>
 <section id="sources"><div class="wrap split"><div><p class="eyebrow">Keep exploring</p><h2>Learn from the experts.</h2><p class="section-intro">Each species card links to its source and identification images. Student research summaries and supporting sources reviewed November 5, 2026.</p></div><div class="resources"><a href="https://www.michigan.gov/invasives">Michigan Invasive Species Program ↗</a><a href="https://www.michigan.gov/invasives/take-action">Michigan prevention and outdoor guidance ↗</a><a href="https://www.michigan.gov/invasives/id-report/crustaceans/rusty-crayfish">Michigan guide to rusty crayfish ↗</a><a href="https://www.michigan.gov/mdard/about/media/pressreleases/2025/06/13/asian-longhorned-ticks-discovered-in-berrien-county">Michigan guide to the Asian longhorned tick ↗</a><a href="https://www.michigan.gov/mdhhs/safety-injury-prev/environmental-health/topics/mitracking/ticks">Michigan tick identification and prevention ↗</a></div></div></section></main><footer><div class="wrap">Siberian Tigers · FLL Challenge team · Learning together. Protecting Michigan.<br>A team education project. Species identification should be confirmed with an expert.</div></footer>
 <script>
-document.querySelectorAll('.profile-photo-toggle').forEach(button => {
+document.querySelectorAll('.profile-photo-toggle, .team-group-toggle').forEach(button => {
   button.addEventListener('click', () => {
     const showingFunPhoto = button.getAttribute('aria-pressed') === 'true';
     button.setAttribute('aria-pressed', String(!showingFunPhoto));
