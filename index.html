@@ -28,6 +28,7 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
 .filming-grid .filming-clip{grid-column:1/-1}
 .filming-grid img,.filming-grid video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--ink)}
 .filming-grid video{max-width:720px;margin:auto}
+.filming-grid .filming-photo{aspect-ratio:4/3}
 .filming-grid figcaption{padding:12px 16px;font-size:15px}
 @media(max-width:620px){.filming-grid{grid-template-columns:1fr}}
 @media print{.filming-grid video{display:none}}
@@ -154,6 +155,17 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
     <h2 id="filming-title">Behind the scenes of our video</h2>
     <p class="section-intro">We took turns in front of the camera to share what we learned about invasive species and show how we use our 3D prints to start conversations. Here are a few moments from our filming night.</p>
     <div class="filming-grid">
+      <figure class="filming-clip">
+        <video controls playsinline preload="none" width="640" height="360" poster="assets/filming/team-filming-poster.webp" aria-label="Behind-the-scenes footage of the team recording an interview">
+          <source src="assets/filming/team-filming.mp4" type="video/mp4">
+          <a href="assets/filming/team-filming.mp4">Open our behind-the-scenes clip</a>
+        </video>
+        <figcaption>We took turns in front of the camera and listened while our teammates recorded their answers. This clip has no audio.</figcaption>
+      </figure>
+      <figure class="filming-clip">
+        <img class="filming-photo" src="assets/filming/team-filming-photo.webp" width="960" height="720" loading="lazy" decoding="async" alt="Team members seated at a table with papers while a teammate sits across from them for an interview">
+        <figcaption>We kept our interview questions on the table as we filmed.</figcaption>
+      </figure>
       <figure class="filming-clip">
         <video controls playsinline preload="none" width="640" height="360" poster="assets/filming/hype-chain-take.webp" aria-label="Filming-night clip of a student showing the Hype Chain">
           <source src="assets/filming/hype-chain-take.mp4" type="video/mp4">
