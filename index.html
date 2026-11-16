@@ -391,7 +391,7 @@ videoCover.addEventListener('click', (event) => {
   if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   event.preventDefault();
   const player = document.createElement('iframe');
-  player.src = 'https://www.youtube-nocookie.com/embed/7DIDdWYNtAY?autoplay=1&playsinline=1';
+  player.src = 'https://www.youtube-nocookie.com/embed/7DIDdWYNtAY?autoplay=1&playsinline=1&cc_load_policy=0';
   player.title = 'Siberian Tigers invasive species video';
   player.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
   player.referrerPolicy = 'strict-origin-when-cross-origin';
