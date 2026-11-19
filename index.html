@@ -106,6 +106,19 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
   .profile-photo-toggle:hover .professional-photo{visibility:hidden}
   .profile-photo-toggle:hover .fun-photo{visibility:visible}
 }
+
+.mission-evidence,.team-moments{margin-top:40px}
+.mission-map{max-width:900px}
+.mission-code-grid,.team-moments-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.mission-evidence figure,.team-moments figure{margin:0}
+.mission-evidence img,.team-moments img{display:block;width:100%;height:auto;border-radius:8px}
+.mission-evidence figcaption,.team-moments figcaption{margin-top:8px}
+.mission-code-grid img{aspect-ratio:4/3;object-fit:contain;background:white}
+.coach-portrait{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 43%;border-bottom:4px solid var(--orange)}
+.team-moments-grid{max-width:760px}
+.team-moments-grid img{aspect-ratio:4/3;object-fit:cover}
+.team-moments-grid figure:last-child img{object-position:center 35%}
+@media(max-width:560px){.mission-code-grid,.team-moments-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="#" aria-label="Siberian Tigers, team 38050 — home"><img class="brand-logo" src="assets/siberian-tigers-logo-clean.png" alt="" width="1352" height="1163"><img class="brand-mascot" src="assets/siberian-tiger-head.png" alt="" width="612" height="612"><span class="team-name">Siberian Tigers<small>Team 38050</small></span></a><div class="links"><a href="#team-video">Watch</a><a href="#species">Identify</a><a href="#prevent">Take action</a><a href="#project">See our project</a><a href="judging.html">Judging Portfolio</a><a class="teacher-link" href="classroom.html">For teachers</a></div></nav></div></header>
@@ -306,7 +319,39 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
     </figure>
   </div>
 </section>
-<section id="wildbot" class="dark"><div class="wrap"><div class="split wildbot-intro"><div><p class="eyebrow">FIRST LEGO League Challenge · Robot Game</p><h2>Meet Wildbot</h2><p class="section-intro">Wildbot is the Siberian Tigers’ competition robot. On the Robot Game field, we work together to build, program, and test how Wildbot moves and completes missions.</p><p>We started with last year’s base design and chose wider wheels for better grip. We grouped nearby missions that could share an attachment so Wildbot could do more in one run.</p></div><aside class="note"><h3>Our Flip the Rock redesign</h3><p>Our first motor-powered attachment was inconsistent. We simplified the attachment, changed how it connected, and slowed Wildbot down.</p><a href="#wildbot-iteration">Read what happened when we tested it</a></aside></div><div class="wildbot-stories"><div><h3>How we built it</h3><p>We built our attachments on the same size frame. Two gears on top drive them, and L-shaped LEGO pieces lock them in place so we can swap them quickly.</p></div><div><h3>How we programmed it</h3><p>We use My Blocks to reuse code and the gyro sensor to help Wildbot drive straight and turn accurately. At the start of a program, we lower the attachment arm and set that position to zero so it starts in the same place each time.</p></div><div><h3 id="wildbot-iteration">How we improved it</h3><p>For Flip the Rock, our first motor-powered attachment worked inconsistently. We tried a simpler attachment, adjusted how it connected, and slowed Wildbot down. Testing those changes helped us get the mission working.</p></div></div></div></section>
+<section id="wildbot" class="dark"><div class="wrap"><div class="split wildbot-intro"><div><p class="eyebrow">FIRST LEGO League Challenge · Robot Game</p><h2>Meet Wildbot</h2><p class="section-intro">Wildbot is the Siberian Tigers’ competition robot. On the Robot Game field, we work together to build, program, and test how Wildbot moves and completes missions.</p><p>We started with last year’s base design and chose wider wheels for better grip. We grouped nearby missions that could share an attachment so Wildbot could do more in one run.</p></div><aside class="note"><h3>Our Flip the Rock redesign</h3><p>Our first motor-powered attachment was inconsistent. We simplified the attachment, changed how it connected, and slowed Wildbot down.</p><a href="#wildbot-iteration">Read what happened when we tested it</a></aside></div><div class="wildbot-stories"><div><h3>How we built it</h3><p>We built our attachments on the same size frame. Two gears on top drive them, and L-shaped LEGO pieces lock them in place so we can swap them quickly.</p></div><div><h3>How we programmed it</h3><p>We use My Blocks to reuse code and the gyro sensor to help Wildbot drive straight and turn accurately. At the start of a program, we lower the attachment arm and set that position to zero so it starts in the same place each time.</p></div><div><h3 id="wildbot-iteration">How we improved it</h3><p>For Flip the Rock, our first motor-powered attachment worked inconsistently. We tried a simpler attachment, adjusted how it connected, and slowed Wildbot down. Testing those changes helped us get the mission working.</p></div></div>
+    <div class="mission-evidence" id="mission-planning">
+      <h3>Our mission map and code</h3>
+      <p>We mapped five runs across the BIOGLOW field. Select the map or a code sheet to read it at full size.</p>
+      <div class="mission-map"><figure>
+          <a href="assets/robot-game/mission-map.webp" aria-label="Open Mission map at full size"><img src="assets/robot-game/mission-map.webp" alt="BIOGLOW field map with colored arrows tracing five planned runs from both launch areas" width="1100" height="640" loading="lazy" decoding="async"></a>
+          <figcaption>Mission map</figcaption>
+        </figure></div>
+      <h4>Wildbot’s mission programs</h4>
+      <div class="mission-code-grid">
+        <figure>
+          <a href="assets/robot-game/flip-the-rock.webp" aria-label="Open Flip the Rock at full size"><img src="assets/robot-game/flip-the-rock.webp" alt="A timed drive forward, followed by a stop and reverse" width="1187" height="1190" loading="lazy" decoding="async"></a>
+          <figcaption>Flip the Rock</figcaption>
+        </figure>
+        <figure>
+          <a href="assets/robot-game/drone-and-ants.webp" aria-label="Open Drone &amp; Ants at full size"><img src="assets/robot-game/drone-and-ants.webp" alt="Three block sequences linked by broadcasts, with gyro turns and timed driving" width="1187" height="1410" loading="lazy" decoding="async"></a>
+          <figcaption>Drone &amp; Ants</figcaption>
+        </figure>
+        <figure>
+          <a href="assets/robot-game/exploding-seeds-and-big-tree.webp" aria-label="Open Exploding Seeds &amp; Big Tree at full size"><img src="assets/robot-game/exploding-seeds-and-big-tree.webp" alt="Two block sequences use a SeedsDone broadcast, gyro turns and attachment motors" width="1187" height="1190" loading="lazy" decoding="async"></a>
+          <figcaption>Exploding Seeds &amp; Big Tree</figcaption>
+        </figure>
+        <figure>
+          <a href="assets/robot-game/elder-forest-and-keystone.webp" aria-label="Open Elder Forest &amp; Keystone at full size"><img src="assets/robot-game/elder-forest-and-keystone.webp" alt="Four block sequences use broadcasts to coordinate driving and attachments" width="1187" height="1505" loading="lazy" decoding="async"></a>
+          <figcaption>Elder Forest &amp; Keystone</figcaption>
+        </figure>
+        <figure>
+          <a href="assets/robot-game/skylight.webp" aria-label="Open Skylight at full size"><img src="assets/robot-game/skylight.webp" alt="Blocks position the attachment, approach the model, rotate a motor and reverse" width="1187" height="1190" loading="lazy" decoding="async"></a>
+          <figcaption>Skylight</figcaption>
+        </figure>
+      </div>
+    </div>
+</div></section>
 <section id="team"><div class="wrap"><p class="eyebrow">Siberian Tigers</p><h2>Meet the team</h2><p class="section-intro">Meet the students, coaches, and mentor behind Wildbot and our invasive species project.</p><figure id="team-group">
   <button class="team-group-toggle" type="button" aria-label="Show our fun team photo" aria-pressed="false">
     <img class="team-group-image team-group-main" src="assets/team/team-group.webp" alt="" width="1440" height="1080" loading="lazy" decoding="async">
@@ -368,8 +413,16 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
     </div>
   </article>
 </div>
-<h3 class="roster-heading">Our coaches</h3><div class="roster-grid coaches-grid"><article class="profile-card"><div class="profile-content"><p class="profile-role">Coach</p><h4>Amy</h4><p>Amy keeps the team organized, guides the Innovation Project, and helps students find their voice as public speakers.</p></div></article>
-<article class="profile-card"><div class="profile-content"><p class="profile-role">Coach</p><h4>Matt</h4><p>From the field setup to the code that gets Wildbot moving, Matt guides the robot build, field build, programming, and engineering.</p></div></article></div></div></section>
+<h3 class="roster-heading">Our coaches</h3><div class="roster-grid coaches-grid"><article class="profile-card"><img class="coach-portrait" src="assets/team/coach-amy.webp" alt="Coach Amy in her orange team shirt" width="850" height="812" loading="lazy" decoding="async"><div class="profile-content"><p class="profile-role">Coach</p><h4>Amy</h4><p>Amy keeps the team organized, guides the Innovation Project, and helps students find their voice as public speakers.</p></div></article>
+<article class="profile-card"><div class="profile-content"><p class="profile-role">Coach</p><h4>Matt</h4><p>From the field setup to the code that gets Wildbot moving, Matt guides the robot build, field build, programming, and engineering.</p></div></article></div>
+    <div class="team-moments">
+      <h3>Team snapshots</h3>
+      <div class="team-moments-grid">
+        <figure><img src="assets/team/coach-amy-and-son.webp" alt="Coach Amy and her son making matching faces in their team gear" width="850" height="764" loading="lazy" decoding="async"><figcaption>Coach Amy and her son</figcaption></figure>
+        <figure><img src="assets/team/student-at-laptop.webp" alt="A student in a blue hoodie behind a laptop covered in stickers" width="710" height="920" loading="lazy" decoding="async"><figcaption>A Siberian Tigers student at a laptop</figcaption></figure>
+      </div>
+    </div>
+</div></section>
 <section id="share"><div class="wrap"><div class="share"><div><p class="eyebrow">Pass it on</p><h2>Scan. Learn. Protect.</h2><p>Share our guide at a team event, on a poster or with someone who loves Michigan’s outdoors.</p><p><a href="https://siberiantigers.org/">siberiantigers.org</a></p><p class="no-print"><a href="assets/siberian-tigers-qr.svg">Open printable QR code ↗</a> · <button class="button" onclick="window.print()">Print this page</button></p><small>This QR code opens siberiantigers.org.</small></div><img src="assets/siberian-tigers-qr.svg" alt="QR code linking to the Siberian Tigers Michigan invasive species website" width="240" height="240"></div></div></section>
 <section id="sources"><div class="wrap split"><div><p class="eyebrow">Keep exploring</p><h2>Learn from the experts.</h2><p class="section-intro">Each species card links to its source and identification images. Student research summaries and supporting sources reviewed November 5, 2026.</p></div><div class="resources"><a href="https://www.michigan.gov/invasives">Michigan Invasive Species Program ↗</a><a href="https://www.michigan.gov/invasives/take-action">Michigan prevention and outdoor guidance ↗</a><a href="https://www.michigan.gov/invasives/id-report/crustaceans/rusty-crayfish">Michigan guide to rusty crayfish ↗</a><a href="https://www.michigan.gov/mdard/about/media/pressreleases/2025/06/13/asian-longhorned-ticks-discovered-in-berrien-county">Michigan guide to the Asian longhorned tick ↗</a><a href="https://www.michigan.gov/mdhhs/safety-injury-prev/environmental-health/topics/mitracking/ticks">Michigan tick identification and prevention ↗</a></div></div></section></main><footer><div class="wrap">Siberian Tigers · FLL Challenge team · Learning together. Protecting Michigan.<br>A team education project. Species identification should be confirmed with an expert.</div></footer>
 <script>
