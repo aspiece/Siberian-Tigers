@@ -117,7 +117,9 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
 .coach-portrait{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 43%;border-bottom:4px solid var(--orange)}
 .team-moments-grid{max-width:760px}
 .team-moments-grid img{aspect-ratio:4/3;object-fit:cover}
-.team-moments-grid figure:last-child img{object-position:center 35%}
+.team-moments-grid img[src$="/student-at-laptop.webp"]{object-position:center 35%}
+.team-moments-grid .team-speech-photo{grid-column:1/-1}
+.team-moments-grid .team-speech-photo img{aspect-ratio:auto}
 @media(max-width:560px){.mission-code-grid,.team-moments-grid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -418,6 +420,7 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
     <div class="team-moments">
       <h3>Team snapshots</h3>
       <div class="team-moments-grid">
+        <figure class="team-speech-photo"><img src="assets/team/speech-practice.webp" alt="Team members wearing orange and white chains stand in a row with printed speaking notes" width="1400" height="647" loading="lazy" decoding="async"><figcaption>Siberian Tigers students practicing their speech.</figcaption></figure>
         <figure><img src="assets/team/coach-amy-and-son.webp" alt="Coach Amy and her son making matching faces in their team gear" width="850" height="764" loading="lazy" decoding="async"><figcaption>Coach Amy and her son</figcaption></figure>
         <figure><img src="assets/team/student-at-laptop.webp" alt="A student in a blue hoodie editing the team’s video on a laptop covered in stickers" width="710" height="920" loading="lazy" decoding="async"><figcaption>A Siberian Tigers student editing our Innovation Project video.</figcaption></figure>
       </div>
