@@ -114,7 +114,8 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
 .mission-evidence img,.team-moments img{display:block;width:100%;height:auto;border-radius:8px}
 .mission-evidence figcaption,.team-moments figcaption{margin-top:8px}
 .mission-code-grid img{aspect-ratio:4/3;object-fit:contain;background:white}
-.coach-portrait{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 43%;border-bottom:4px solid var(--orange)}
+.coach-photo-toggle{aspect-ratio:4/3}
+.coach-photo-toggle img{object-fit:cover;object-position:center 43%}
 .team-moments-grid{max-width:760px}
 .team-moments-grid img{aspect-ratio:4/3;object-fit:cover}
 .team-moments-grid img[src$="/student-at-laptop.webp"]{object-position:center 35%}
@@ -433,8 +434,23 @@ nav .links .teacher-link{color:var(--muted);text-decoration:underline}
     </div>
   </article>
 </div>
-<h3 class="roster-heading">Our coaches</h3><div class="roster-grid coaches-grid"><article class="profile-card"><img class="coach-portrait" src="assets/team/coach-amy.webp" alt="Coach Amy in her orange team shirt" width="850" height="812" loading="lazy" decoding="async"><div class="profile-content"><p class="profile-role">Coach</p><h4>Amy</h4><p>Amy keeps the team organized, guides the Innovation Project, and helps students find their voice as public speakers.</p></div></article>
-<article class="profile-card"><div class="profile-content"><p class="profile-role">Coach</p><h4>Matt</h4><p>From the field setup to the code that gets Wildbot moving, Matt guides the robot build, field build, programming, and engineering.</p></div></article></div>
+<h3 class="roster-heading">Our coaches</h3>
+<div class="roster-grid coaches-grid">
+  <article class="profile-card">
+    <button type="button" class="profile-photo profile-photo-toggle coach-photo-toggle" aria-label="Show Coach Amy’s fun photo" aria-pressed="false">
+      <img class="professional-photo" src="assets/team/coach-amy.webp" alt="Coach Amy’s portrait" loading="lazy" decoding="async">
+      <img class="fun-photo" src="assets/team/coach-amy-and-son.webp" alt="Coach Amy’s fun photo" loading="lazy" decoding="async">
+    </button>
+    <div class="profile-content"><p class="profile-role">Coach</p><h4>Amy</h4><p>Amy keeps the team organized, guides the Innovation Project, and helps students find their voice as public speakers.</p></div>
+  </article>
+  <article class="profile-card">
+    <button type="button" class="profile-photo profile-photo-toggle coach-photo-toggle" aria-label="Show Coach Matt’s fun photo" aria-pressed="false">
+      <img class="professional-photo" src="assets/team/coach-matt.webp" alt="Coach Matt’s portrait" loading="lazy" decoding="async">
+      <img class="fun-photo" src="assets/team/coach-matt-fun.webp" alt="Coach Matt’s fun photo" loading="lazy" decoding="async">
+    </button>
+    <div class="profile-content"><p class="profile-role">Coach</p><h4>Matt</h4><p>From the field setup to the code that gets Wildbot moving, Matt guides the robot build, field build, programming, and engineering.</p></div>
+  </article>
+</div>
     <div class="team-moments">
       <h3>Team snapshots</h3>
       <div class="team-moments-grid">
